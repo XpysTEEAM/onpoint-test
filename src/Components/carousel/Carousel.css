@@ -1,0 +1,16 @@
+.main-container {
+   height: 768px;
+   width: 1024px;
+}
+
+.window {
+   height: 100%;
+   width: 100%;
+   overflow: hidden;
+}
+
+.all-pages-container {
+   height: 100%;
+   display: flex;
+
+}
