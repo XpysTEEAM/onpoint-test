@@ -2,7 +2,6 @@
 @import '../Fonts/DIN Pro/DINPro';
 // @import url('Gilroy-Regular.eot');
 // @import url('Gilroy-ExtraBold.eot');
-@import './button';
 @import './variables';
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
@@ -48,7 +47,23 @@ p {
 }
 
 .container {
-   margin: 0 139px 0 92px;
-   padding: 50px 0 50px 0;
+   padding: 26px 70px 16px 45px;
    position: relative;
+}
+
+::-webkit-scrollbar {
+   width: 20px;
+}
+
+::-webkit-scrollbar-track {
+   background-color: $dark;
+   border-radius: 9px;
+   border: 7px solid transparent;
+   background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: $pink;
+   border-radius: 1em;
+   box-shadow: inset 5px 5px 5px #92426d, inset -5px -5px 5px #e198b9;
 }

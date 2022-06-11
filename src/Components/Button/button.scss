@@ -1,0 +1,31 @@
+@import '../../styles/variables.scss';
+
+.button-main {
+   width: 289px;
+   height: 81px;
+   border-radius: 40px;
+   background-color: $pink;
+   border: none;
+   font-size: 28px;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+}
+
+.button-main__shadow {
+   background-color: $pink;
+   width: 60px;
+   height: 60px;
+   line-height: 50px;
+   border-radius: 50%;
+   margin: 0px 15px;
+   padding: 5px;
+   box-shadow: inset 8px 8px 6px -5px #92426d, inset -8px -8px 6px -5px #e198b9;
+}
+
+.button-main__arrow {
+   text-align: center;
+   border-radius: 50%;
+   color: white;
+   background-color: $dark;
+}

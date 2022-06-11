@@ -1,0 +1,36 @@
+.main-page {
+
+   &__container {
+      padding-top: 170px;
+   }
+
+   &__primary-text {
+      font-family: 'Gilroy Light';
+      font-size: 109px;
+      line-height: 117px;
+      letter-spacing: 5px;
+   }
+
+   &__secondary-text {
+      font-family: 'DIN Pro';
+      font-size: 27px;
+      margin-bottom: 3px;
+   }
+
+   &__button {
+      position: absolute;
+      bottom: 55px;
+      right: 107px;
+   }
+}
+
+
+.background-main {
+   height: 100%;
+   background: url(../../../resources/img/bg1.png);
+   background-size: cover;
+}
+
+.ExtraBold {
+   font-family: 'Gilroy Extra Bold';
+}

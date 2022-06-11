@@ -1,7 +1,9 @@
 import { Children, useEffect, useState, cloneElement } from 'react'
+import AppHeader from '../AppHeader/AppHeader'
 import './carousel.css'
 
 const PAGE_WIDTH = 1024
+const PAGE_HEIGHT = 768
 
 const Carousel = ({ children, buttons }) => {
 
@@ -13,7 +15,7 @@ const Carousel = ({ children, buttons }) => {
 
 
    const next = () => {
-      if (activeIndex < (pages.length - 1)) {
+      if (activeIndex < (children.length - 1)) {
          setActiveIndex(prevState => prevState + 1)
       } else {
          setActiveIndex(0)
@@ -26,6 +28,15 @@ const Carousel = ({ children, buttons }) => {
       } else {
          setActiveIndex(pages.length - 1)
       }
+   }
+
+   const toMain = () => {
+      setActiveIndex(0)
+   }
+
+   const log = () => {
+      console.log('log!')
+
    }
 
    const startDrag = (e) => {
@@ -53,15 +64,13 @@ const Carousel = ({ children, buttons }) => {
       setActiveButtons(buttons)
       setPages(
          Children.map(children, child => {
-            console.log(child)
             return cloneElement(child, {
-
                style: {
-                  height: '100%',
                   minWidth: `${PAGE_WIDTH}px`,
                   maxWidth: `${PAGE_WIDTH}px`
                },
-
+               next: next,
+               prev: prev,
             })
          })
       )
@@ -72,6 +81,7 @@ const Carousel = ({ children, buttons }) => {
          <div className="window"
             onPointerDown={startDrag}
             onPointerMove={dragging}>
+            <AppHeader toMain={toMain} />
             <div
                className="all-pages-container"
                style={{ transform: `translateX(-${activeIndex * 100}%)` }}

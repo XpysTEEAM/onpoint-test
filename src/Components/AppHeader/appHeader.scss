@@ -1,16 +1,30 @@
 @import '../../styles/variables.scss';
 
 .app {
+   &__header {
+      position: fixed;
+      z-index: 50;
+   }
+
    &__menu {
+
       ul {
          display: flex;
-         justify-content: space-between;
-         font-size: 24px;
+         font-size: 19px;
          line-height: 32px;
-
-         li {
-            margin: 0 8px;
-         }
       }
+   }
+
+   &__home {
+      padding-top: 3px;
+      margin-right: 25px;
+   }
+
+   &__separator {
+      font-size: 24px;
+   }
+
+   &__name {
+      margin-left: 25px;
    }
 }
